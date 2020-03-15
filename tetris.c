@@ -1,11 +1,3 @@
-//you might notice a lot of magic numbers floating around in this code, but if
-//you aren't retarded, you'll also notice that those magic numbers are rather
-//clear - most of them are simply offsets. some from the end of the screen, some
-//from fixedpoint, but there were too many to get rid of them all... obviously,
-//some are just there to make sure the proper number of bytes is copied!
-//remember the proverb: the magicality of numbers is in the eye of the beholder.
-//a keen observer can make sense of any number, so don't be retarded.
-
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,23 +10,24 @@
 #include "keys.h"
 #include "settings.h"
 
-//DO NOT CHANGE
 #define WIDTH 25
 #define HEIGHT 24
 #define TOPLSITMAXLINELENGTH 34
 
-//init variables
 char piece;
 char *name;
-//set flags to default values
+
+
 int level, score, showtext = 1, next, shownext = 1, end, clrlines = 0;
 int startlevel, dropped = 0;
 int fixedpoint[2] = {0};
-//screen is divided into three sections - left, right and center
+
+
 char left[HEIGHT][WIDTH] = {0};
 char center[HEIGHT][WIDTH] = {0};
 char right[HEIGHT][WIDTH] = {0};
-//all possible tetrominos
+
+
 char TetrominoI[2][WIDTH] = {"<! . . . . . . . . . .!>",
                              "<! . . .[][][][] . . .!>"};
 char TetrominoJ[2][WIDTH] = {"<! . . .[] . . . . . .!>",
