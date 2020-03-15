@@ -1,4 +1,3 @@
-//key bindings, all should be lowercase letters
 #define MOVL 'q'
 #define MOVR 'e'
 #define ROTA 'w'
