@@ -1,20 +1,11 @@
-#
 CC=gcc
-
 CFLAGS=-Wall -pedantic -g
-
 INCLUDES=
-
 LFLAGS=
-
 LIBS=-lncurses
-
 SRCS=tetris.c
-
 OBJS=$(SRCS:.c=.o)
-
 NAME=tetris
-
 .PHONY: depend clean
 
 all: $(NAME)
@@ -31,5 +22,3 @@ clean:
 
 depend: $(SRCS)
 	makedepend $(INCLUDES) $^
-
-#
